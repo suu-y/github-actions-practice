@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     env:
       USERNAME: ${{ vars.USERNAME }}
-    step:
+    steps:
       - run: echo "${USERNAME}"
