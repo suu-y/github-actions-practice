@@ -1,0 +1,15 @@
+name: Literals
+on:
+  schedule:
+    - cron: "15 14 * * *"
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printenv | grep 'LITERAL_'
+        env:
+          LITERAL_NULL: ${{ null }}
+          LITERAL_BOOLEAN: ${{ true }}
+          LUTERAL_NUMBER: ${{ 1234 }}
+          LITERAL_STRING: ${{ 'Hello' }}
+          LITERAL_OMIT_STRING: World
